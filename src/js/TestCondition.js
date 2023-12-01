@@ -7,7 +7,6 @@ function setTestCondition(parent) {
         let DemoContainer = document.createElement('div')
         DemoContainer.className='container mt-3 d-flex flex-column justify-content-center';
     
-
         DemoContainer.innerHTML = 'Hello';
 
         parent.appendChild(DemoContainer);

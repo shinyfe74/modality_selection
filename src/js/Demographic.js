@@ -6,6 +6,7 @@ function setDemo(parent) {
     //draw page
     let DemoContainer = document.createElement('div')
     DemoContainer.className='container mt-3 d-flex flex-column justify-content-center';
+    DemoContainer.style.paddingTop = '200px';
 
     let DemoList_kor = {'Participant Number': ['input', ''], '이름': ['input' ,'이름을 입력해주세요.'],'출생년도': ['list'],'성별': ['radio', '남', '여'],'사용해본 음성시스템': ['input', '콤마(,)를 사용해서 입력해주세요.'], '음성시스템 사용 빈도': ['radio', '일 1회 이상','주 1회 이상', '월 1회 이상','거의 안함']}
     let DemoLIst_eng = {'Participant Number': ['input', ''], 'Name': ['input', 'Input Your Name'],'Year': ['list'],'Gender': ['radio', 'Male', 'Female'],'Used Voice Assistant': ['input', 'Seperate with Comma(,)'], 'Voice Assistant Usage': ['radio', 'Daily','Weekly', 'Monthly','Rarely']}
@@ -21,7 +22,11 @@ function setDemo(parent) {
     for (var key in DemoList){
         let DemoLine = document.createElement('div');
         DemoLine.className = 'd-flex w-100 mb-3';
-        
+
+        let Spacer = document.createElement('div');
+        Spacer.style.width = '150px'
+        DemoLine.appendChild(Spacer);
+
         //
         let Surtext = document.createElement('span');
         Surtext.className = 'text-end me-2 fs-5 fw-bold';
