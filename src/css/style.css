@@ -1,0 +1,15 @@
+.progressButton {
+    background: rgb(119, 238, 223);
+    color: rgb(0, 0, 0);
+    border: none;
+    position: relative;
+    height: 60px;
+    padding: 0 1em;
+    cursor: pointer;
+    transition: 100ms ease all;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 10rem;
+}
