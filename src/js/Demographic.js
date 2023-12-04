@@ -3,20 +3,22 @@
  * @param {Node} parent - parent should be object
  */
 function setDemo(parent) {
+    //display header
+    Header.style.display = 'block';
     //draw page
     let DemoContainer = document.createElement('div')
     DemoContainer.className='container mt-3 d-flex flex-column justify-content-center';
     DemoContainer.style.paddingTop = '200px';
 
     let DemoList_kor = {'Participant Number': ['input', ''], '이름': ['input' ,'이름을 입력해주세요.'],'출생년도': ['list'],'성별': ['radio', '남', '여'],'사용해본 음성시스템': ['input', '콤마(,)를 사용해서 입력해주세요.'], '음성시스템 사용 빈도': ['radio', '일 1회 이상','주 1회 이상', '월 1회 이상','거의 안함']}
-    let DemoLIst_eng = {'Participant Number': ['input', ''], 'Name': ['input', 'Input Your Name'],'Year': ['list'],'Gender': ['radio', 'Male', 'Female'],'Used Voice Assistant': ['input', 'Seperate with Comma(,)'], 'Voice Assistant Usage': ['radio', 'Daily','Weekly', 'Monthly','Rarely']}
+    let DemoList_eng = {'Participant Number': ['input', ''], 'Name': ['input', 'Input Your Name'],'Year': ['list'],'Gender': ['radio', 'Male', 'Female'],'Used Voice Assistant': ['input', 'Seperate with Comma(,)'], 'Voice Assistant Usage': ['radio', 'Daily','Weekly', 'Monthly','Rarely']}
 
     let DemoList = DemoList_kor;
 
     if (userLanguage == 'Kor'){
         DemoList = DemoList_kor;
     } else if (userLanguage == 'Eng'){
-        DemoList = DemoLIst_eng;
+        DemoList = DemoList_eng;
     }
 
     for (var key in DemoList){
@@ -29,7 +31,7 @@ function setDemo(parent) {
 
         //
         let Surtext = document.createElement('span');
-        Surtext.className = 'text-end me-2 fs-5 fw-bold';
+        Surtext.className = 'text-end me-2 fs-5 fw-bold border-bottom border-black border-2';
         Surtext.style.width = '300px';
         Surtext.innerText = key+": ";
         DemoLine.appendChild(Surtext);
@@ -67,10 +69,10 @@ function setDemo(parent) {
                 let radioButton = document.createElement('input');
                 radioButton.setAttribute('type','radio');
                 radioButton.setAttribute('name', key);
-                radioButton.setAttribute('id',key);
+                radioButton.setAttribute('id', key +" "+ DemoList[key][i]);
                 radioButton.value = i;
                 radioLabel.className = 'fs-5 me-3';
-                radioLabel.innerHTML = DemoList[key][i];
+                radioLabel.innerHTML = DemoList[key][i]+" ";
 
 
                 radioLabel.appendChild(radioButton);
@@ -89,11 +91,23 @@ function setDemo(parent) {
     DemoContainer.appendChild(NextButton);
     parent.appendChild(DemoContainer);
 
+    //if already have user data
+    //put the data in matched field
+    if (userData.partnum){
+        let DemoKeys = Object.keys(DemoList);
+        document.getElementById(DemoKeys[0]).value = userData.partnum;
+        document.getElementById(DemoKeys[1]).value = userData.name;
+        document.getElementById(DemoKeys[2]).value = userData.age;
+        document.getElementById(DemoKeys[3] +" "+ DemoList[DemoKeys[3]][parseInt(userData.gender)]).checked = true;
+        document.getElementById(DemoKeys[4]).value = userData.usedSystem;
+        document.getElementById(DemoKeys[5] +" "+ DemoList[DemoKeys[5]][parseInt(userData.vuiUsage)]).checked = true;
+    }
+
 }
 
 /**
  * save Demographic survay value
- * to move TestCondition
+ * move to TestCondition
  * @param {Node} parent - parent should be object
  */
 function DemoToTestCond(parent){
