@@ -6,7 +6,7 @@ function setTestCondition(parent) {
         //display header
         Header.style.display = 'block';
         //draw page
-        let TestConditionContainer = document.createElement('div')
+        let TestConditionContainer = document.createElement('div');
         TestConditionContainer.className='container mt-3 d-flex flex-column justify-content-center pt-5';
 
         let CondList ={'Participant Number': ['input', ''], 'Test Language': ['radio', 'Kor', 'Eng'], 'Test Type': ['radio', 'Non-hi','Hi'], 'Context Modality': ['radio', 'Baseline', 'Driving', 'Reading', 'Video'], 'Number of Touch': ['list'], 'Test List': ['radio', 'Movie', 'Restaurant', 'Word'], 'Test Order': ['radio', 'Sequential', 'Random'], 'Test Preview':['radio', 'Yes', 'No']}
@@ -85,7 +85,7 @@ function setTestCondition(parent) {
         let NextBtn = document.createElement('button');
         NextBtn.className = 'progressButton mx-auto';
         NextBtn.textContent = 'Next';
-        NextBtn.setAttribute('onclick', 'TestCondToPreview(PresentPage)');
+        NextBtn.setAttribute('onclick', 'TestCondToWaiting(PresentPage)');
         
         BtnContainer.appendChild(PrevBtn);
         BtnContainer.appendChild(NextBtn);
@@ -112,10 +112,10 @@ function setTestCondition(parent) {
 
 /**
  * save Test Condition value
- * to move Preview
+ * to move TestWaiting
  * @param {Node} parent - parent should be object
  */
-function TestCondToPreview(parent){
+function TestCondToWaiting(parent){
         let CondList ={'Participant Number': ['input', ''], 'Test Language': ['radio', 'Kor', 'Eng'], 'Test Type': ['radio', 'Non-hi','Hi'], 'Context Modality': ['radio', 'Baseline', 'Driving', 'Reading', 'Video'], 'Number of Touch': ['list'], 'Test List': ['radio', 'Movie', 'Restaurant', 'Word'], 'Test Order': ['radio', 'Sequential', 'Random'], 'Test Preview':['radio', 'Yes', 'No']}
     
 
@@ -136,7 +136,7 @@ function TestCondToPreview(parent){
 
         removeChildren(parent);
         
-        setTestPreview(parent);
+        setTestWaiting(parent);
 }
 
 /**

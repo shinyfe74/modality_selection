@@ -6,7 +6,7 @@ function setDemo(parent) {
     //display header
     Header.style.display = 'block';
     //draw page
-    let DemoContainer = document.createElement('div')
+    let DemoContainer = document.createElement('div');
     DemoContainer.className='container mt-3 d-flex flex-column justify-content-center';
     DemoContainer.style.paddingTop = '200px';
 

@@ -11,5 +11,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
     //test
     // setTestCondition(PresentPage);
+    // setTestWaiting(PresentPage);
     
 })
