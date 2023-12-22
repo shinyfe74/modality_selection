@@ -121,7 +121,7 @@ function TestCondToWaiting(parent){
 
         let CondKeys = Object.keys(CondList);
         userData.partnum = document.getElementById(CondKeys[0]).value;
-        let ThisTestData = new Array();
+        let ThisTestData = {};
         ThisTestData = {
                 Language: document.querySelector('input[name="'+CondKeys[1]+'"]:checked').value,
                 Type: document.querySelector('input[name="'+CondKeys[2]+'"]:checked').value,
@@ -129,10 +129,13 @@ function TestCondToWaiting(parent){
                 NumberofTouch: document.getElementById(CondKeys[4]).value,
                 List: document.querySelector('input[name="'+CondKeys[5]+'"]:checked').value,
                 Order: document.querySelector('input[name="'+CondKeys[6]+'"]:checked').value,
-                Preview: document.querySelector('input[name="'+CondKeys[7]+'"]:checked').value
+                Preview: document.querySelector('input[name="'+CondKeys[7]+'"]:checked').value,
+                TrialResult: new Array(),
+                SurveyResult: new Array(),
         }
 
         userData.testData.push(ThisTestData);
+        // userData['Hello'] = '코끼리';
 
         removeChildren(parent);
         

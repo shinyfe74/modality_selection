@@ -1,5 +1,5 @@
 /**
- * set Test Condition page
+ * set Test Waiting page
  * @param {Node} parent - parent should be object
  */
 function setTestWaiting(parent) {
