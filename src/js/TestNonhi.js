@@ -132,3 +132,18 @@ function createTouchNumber(){
 
         return [touch_target_number, touch_present_number];
 }
+
+/**
+ *
+ * move to Cond
+ * @param {Node} parent - parent should be object
+ */
+function TestToCond(parent){
+
+        userData.testData.pop();
+    
+        removeChildren(parent);
+        
+        setTestCondition(parent);
+    
+}
