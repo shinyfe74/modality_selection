@@ -7,11 +7,11 @@ userData.testData = new Array();
 
 document.addEventListener('DOMContentLoaded', function(){
     
-    setDemo(PresentPage);
+    // setDemo(PresentPage);
 
     //test
     // setTestCondition(PresentPage);
     // setTestWaiting(PresentPage);
     // setTestPreview(PresentPage);
-    
+    setNonhitest(PresentPage);
 })

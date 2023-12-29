@@ -24,6 +24,8 @@ function setTestPreview(parent) {
 
     //if Preview is 'yes', show the voice modality text
     let PresentAttribute = document.createElement('span');
+    
+    //put target syllables
     if (userData.testData.at(-1).Preview == 1){
         PresentAttribute.innerHTML = 'What to Say'; 
     }

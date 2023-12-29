@@ -5,7 +5,7 @@
 3. ~~Test Wating Page~~
 4. ~~Preview Page~~  Decoration Require
 5. Select Test Target
-6. Test Page (non-hierarchy / hierarchy)
+6. Test Page (~~non-hierarchy~~ / hierarchy)
 7. Speech Recognition Module
 8. Survey Page
 9. Save Data to DB

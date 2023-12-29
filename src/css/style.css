@@ -13,3 +13,55 @@
     margin-bottom: 10px;
     width: 10rem;
 }
+
+.key {
+    color: #f3f3f4;
+    border-radius: 6px;
+    background: #14110f;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  
+
+
+.menuhikey{
+    color: #f3f3f4;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 30mm;
+    height: 30mm;
+    margin-right: 1.5mm;
+    margin-left: 1.5mm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.nonhikey{
+    color: #f3f3f4;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 30mm;
+    height: 30mm;
+    margin-right: 1.5mm;
+    margin-left: 1.5mm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.menuhikey:active,
+.menuhikey:visited,
+.menuhikey:hover,
+.nonhikey:active,
+.nonhikey:visited,
+.nonhikey:hover{
+    background: lime;
+    border: lime; 
+}
+
+
+.key:hover {
+    cursor: pointer;
+}
+  
