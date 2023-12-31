@@ -67,7 +67,7 @@ function setNonhitest(parent) {
         //Voice Target
         let voiceTargetText = document.createElement('span');
         voiceTargetText.className = 'mx-auto mt-5';
-        voiceTargetText.style.fontSize = '2rem';
+        voiceTargetText.style.fontSize = '1.5rem';
         voiceTargetText.innerHTML = "What to say";
 
 
@@ -97,7 +97,7 @@ function setNonhitest(parent) {
 }
 
 /** 
- * present number에 덧샘 뺄샘해서 결과 다시 표시
+ * nonhi test present number에 덧샘 뺄샘해서 결과 다시 표시
 * @param {int} pm - int for adding
 */
 function calculateNum(pm){

@@ -13,5 +13,6 @@ document.addEventListener('DOMContentLoaded', function(){
     // setTestCondition(PresentPage);
     // setTestWaiting(PresentPage);
     // setTestPreview(PresentPage);
-    setNonhitest(PresentPage);
+    // setNonhitest(PresentPage);
+    setHitest(PresentPage);
 })

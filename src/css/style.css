@@ -30,8 +30,7 @@
     font-weight: bold;
     width: 30mm;
     height: 30mm;
-    margin-right: 1.5mm;
-    margin-left: 1.5mm;
+    margin: 1.5mm;
     display: flex;
     justify-content: center;
     align-items: center;
